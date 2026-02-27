@@ -60,7 +60,7 @@
     h1 {
       font-size: 48px;
       font-weight: 700;
-      color: #1a1a1a;
+      color: #444;
       line-height: 1.15;
       margin-bottom: 16px;
       letter-spacing: -0.02em;
@@ -76,17 +76,22 @@
 
     .meta {
       font-size: 13px;
-      color: #999;
+      color: #aaa;
       font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
-      margin-bottom: 40px;
+      margin-bottom: 12px;
     }
 
-    .meta .exhausted {
-      color: #cf222e;
-      font-weight: 600;
-      text-decoration: underline;
-      text-decoration-color: #cf222e;
-      text-underline-offset: 3px;
+    .meta-detail {
+      font-size: 13px;
+      color: #888;
+      font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+
+    .meta-detail .usage {
+      color: #777;
+      font-weight: 500;
     }
 
     .redirect-section {
@@ -109,13 +114,13 @@
 
     .redirect-link {
       font-size: 14px;
-      color: #0969da;
-      text-decoration: underline;
-      transition: color 0.2s;
+      color: #888;
+      text-decoration: none;
+      transition: color 0.15s;
     }
 
     .redirect-link:hover {
-      color: #0550ae;
+      color: #555;
     }
 
     .gradient-bar {
@@ -152,7 +157,8 @@
       <p class="description">
         Suspend the service with the provided ID. The free tier usage limit has been exceeded and this instance has been spun down due to outstanding server running costs.
       </p>
-      <p class="meta">srv-cvptu395pdvs73efu7q0 &nbsp;&middot;&nbsp; <span class="exhausted">free tier credits exhausted</span></p>
+      <p class="meta">srv-cvptu395pdvs73efu7q0</p>
+      <p class="meta-detail">free tier credits exhausted &nbsp;&middot;&nbsp; <span class="usage">750 / 750 hrs used</span></p>
 
       <div class="redirect-section">
         <p class="redirect-text">Redirecting to secondary link in <span id="timer">20</span>s</p>
