@@ -81,8 +81,12 @@
       margin-bottom: 40px;
     }
 
-    .meta span {
-      color: #666;
+    .meta .exhausted {
+      color: #cf222e;
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: #cf222e;
+      text-underline-offset: 3px;
     }
 
     .redirect-section {
@@ -105,16 +109,13 @@
 
     .redirect-link {
       font-size: 14px;
-      color: #666;
-      text-decoration: none;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 1px;
-      transition: color 0.2s, border-color 0.2s;
+      color: #0969da;
+      text-decoration: underline;
+      transition: color 0.2s;
     }
 
     .redirect-link:hover {
-      color: #1a1a1a;
-      border-color: #1a1a1a;
+      color: #0550ae;
     }
 
     .gradient-bar {
@@ -151,7 +152,7 @@
       <p class="description">
         Suspend the service with the provided ID. The free tier usage limit has been exceeded and this instance has been spun down due to outstanding server running costs.
       </p>
-      <p class="meta">srv-cr4m8e3v2p9s00b8k7tg &nbsp;&middot;&nbsp; <span>free tier credits exhausted</span></p>
+      <p class="meta">srv-cr4m8e3v2p9s00b8k7tg &nbsp;&middot;&nbsp; <span class="exhausted">free tier credits exhausted</span></p>
 
       <div class="redirect-section">
         <p class="redirect-text">Redirecting to secondary link in <span id="timer">20</span>s</p>
