@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Suspended</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background-color: #0f1117;
+      color: #c9d1d9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 520px;
+      padding: 40px 32px;
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .icon-wrapper {
+      margin-bottom: 28px;
+    }
+
+    .icon-wrapper svg {
+      width: 56px;
+      height: 56px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(248, 81, 73, 0.15);
+      color: #f85149;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      border: 1px solid rgba(248, 81, 73, 0.25);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 22px;
+      font-weight: 600;
+      color: #e6edf3;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .description {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: #8b949e;
+      margin-bottom: 32px;
+    }
+
+    .info-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin-bottom: 32px;
+      text-align: left;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+    }
+
+    .info-row:not(:last-child) {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .info-label {
+      font-size: 12.5px;
+      color: #6e7681;
+      font-weight: 500;
+    }
+
+    .info-value {
+      font-size: 12.5px;
+      color: #c9d1d9;
+      font-weight: 500;
+    }
+
+    .info-value.status-suspended {
+      color: #f85149;
+    }
+
+    .info-value.status-exceeded {
+      color: #d29922;
+    }
+
+    .redirect-notice {
+      font-size: 13px;
+      color: #6e7681;
+      margin-bottom: 10px;
+    }
+
+    .countdown {
+      font-size: 13px;
+      color: #8b949e;
+    }
+
+    .countdown span {
+      color: #e6edf3;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .progress-bar-track {
+      width: 200px;
+      height: 3px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 3px;
+      margin: 16px auto 0;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, #f85149, #d29922);
+      border-radius: 3px;
+      transform-origin: left;
+      animation: shrink 5s linear forwards;
+    }
+
+    @keyframes shrink {
+      from { transform: scaleX(1); }
+      to { transform: scaleX(0); }
+    }
+
+    .footer-text {
+      margin-top: 40px;
+      font-size: 11.5px;
+      color: #484f58;
+    }
+
+    .footer-text a {
+      color: #58a6ff;
+      text-decoration: none;
+    }
+
+    .footer-text a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon-wrapper">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 9V13M12 17H12.01M5.07183 19H18.9282C20.4678 19 21.4301 17.3333 20.6603 16L13.7321 4C12.9623 2.66667 11.0377 2.66667 10.2679 4L3.33975 16C2.56995 17.3333 3.53223 19 5.07183 19Z" stroke="#f85149" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="badge">Service Suspended</div>
+
+    <h1>This project has been suspended</h1>
+
+    <p class="description">
+      The free tier usage limit for this web service has been exceeded. 
+      The instance has been spun down due to outstanding server running costs.
+    </p>
+
+    <div class="info-box">
+      <div class="info-row">
+        <span class="info-label">Status</span>
+        <span class="info-value status-suspended">Suspended</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Reason</span>
+        <span class="info-value">Free tier credits exhausted</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Usage</span>
+        <span class="info-value status-exceeded">750 / 750 hrs</span>
+      </div>
+    </div>
+
+    <p class="redirect-notice">Redirecting to the project homepage&hellip;</p>
+    <p class="countdown">You will be redirected in <span id="timer">5</span>s</p>
+    <div class="progress-bar-track">
+      <div class="progress-bar-fill"></div>
+    </div>
+
+    <p class="footer-text">
+      Need help? Contact the project owner or upgrade the plan.
+    </p>
+  </div>
+
+  <script>
+    let seconds = 5;
+    const timerEl = document.getElementById('timer');
+
+    const interval = setInterval(() => {
+      seconds--;
+      timerEl.textContent = seconds;
+      if (seconds <= 0) {
+        clearInterval(interval);
+        window.location.href = 'https://amanv.me/';
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
